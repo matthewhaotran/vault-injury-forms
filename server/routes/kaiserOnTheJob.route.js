@@ -9,7 +9,7 @@ module.exports=function (passport) {
         });
     });
     
-    router.get('/vaultir/:id',requiresAuth(), (req, res) => {
+    router.get('/vaultir/:id', (req, res) => {
         kaiserOnTheJob.findOne({  'ssn': req.params.id }, 'date kaiserDoi employeeName employerContactPerson employer employersInsuranceCarrier attachedCheckbox onFileCheckbox contactNameTitle contactPhone contactFax timeStart timeEnd', function (err, kaiserOnTheJob) {
             res.json(kaiserOnTheJob);
         })

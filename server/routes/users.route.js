@@ -7,6 +7,17 @@ module.exports = function (passport) {
 
     router.post('/register', register);  //register is not needed and can be commented out 
     router.post('/userLogin', login);
+    router.get('/vaultir/:id', (req, res) => {
+        User.findOne({ 'ssn': req.params.id }, 'firstName lastName address1 address2 city state zip mobilePhone homePhone workPhone acronym OTHERACRONYM1 ssn employeeId ERIncidentDate ERincidentNumber ERfirstName ERlastName ERaddress1 ERcity ERstate ERzip ERincidentDate ERincidentNumber ERhomePhone ERemployerPhone ERemployerDept EPE1firstName EPE1lastName EPE1employerDept EPE1unitNumber EPE1employerPhone EPE2firstName EPE2lastName EPE2employerDept EPE2unitNumber EPE2employerPhone EPE3firstName EPE3lastName EPE3employerDept EPE3unitNumber EPE3employerPhone exposedTo OTHEREXPOSEDTO1 levelOfExposure explanation requestedBy noDisease ERemployeeNotified ERemployeeNotifiedName DOnotified DOnotifiedName dateOfNotification nameTitle signature', function (err, emergencyResponseEmployeeReport) {
+            res.json(emergencyResponseEmployeeReport);
+        })
+    });
+
+    router.get('/vaultir/employeeId/:id', (req, res) => {
+        User.findOne({ 'employeeId': req.params.id }, 'firstName lastName address1 address2 city state zip mobilePhone homePhone workPhone acronym OTHERACRONYM1 ssn employeeId ERIncidentDate ERincidentNumber ERfirstName ERlastName ERaddress1 ERcity ERstate ERzip ERincidentDate ERincidentNumber ERhomePhone ERemployerPhone ERemployerDept EPE1firstName EPE1lastName EPE1employerDept EPE1unitNumber EPE1employerPhone EPE2firstName EPE2lastName EPE2employerDept EPE2unitNumber EPE2employerPhone EPE3firstName EPE3lastName EPE3employerDept EPE3unitNumber EPE3employerPhone exposedTo OTHEREXPOSEDTO1 levelOfExposure explanation requestedBy noDisease ERemployeeNotified ERemployeeNotifiedName DOnotified DOnotifiedName dateOfNotification nameTitle signature', function (err, emergencyResponseEmployeeReport) {
+            res.json(emergencyResponseEmployeeReport);
+        })
+    });
 
     return router;
 

@@ -22,9 +22,10 @@
                 .login(credentials)
                 .then(function(response){
                     console.log(response);
+                    $state.go('selectForm');
                 });
 
-            $state.go('selectForm');
+            
         }
 
         activate();

@@ -10,7 +10,8 @@
     function userFactory($http) {
         var service = {
             getUsers: getUsers,
-            getUser: getUser
+            getUser: getUser,
+            getUserByEmployeeId: getUserByEmployeeId
         };
 
         return service;
@@ -26,6 +27,14 @@
         function getUser(ssn) {
 			return $http
 				.get('/api/users/vaultir/' + ssn)
+				.then(function (response) {
+					return response.data;
+				});
+        }
+        
+        function getUserByEmployeeId(employeeId) {
+			return $http
+				.get('/api/users/vaultIr/employeeId/' + employeeId)
 				.then(function (response) {
 					return response.data;
 				});
