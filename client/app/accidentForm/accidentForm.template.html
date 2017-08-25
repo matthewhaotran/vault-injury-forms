@@ -1,0 +1,456 @@
+
+
+<!-- <style>
+  body {
+    background-image: url("https://www.newswire.com/files/d3/e2/2b4287e0abe00d67fcb3219820ee.png ");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+</style> -->
+
+
+
+<h2 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Accident Injury Form</h2>
+
+<div class="form-group">
+  <div>
+
+    <hr>
+
+    <div layout="row" layout-align="center center">
+      <md-input-container>
+        <md-card-content>
+          <div layout="row" layout-align="space-between center">
+            <md-card-title>Location of Incident</md-card-title>
+            <md-select ng-model="accidentFormCtrl.formSubmit.locationfOfIncident" placeholder="Form Name" class="md-no-underline">
+              <md-option value="vehicle-accident">Vehicle Accident</md-option>
+              <md-option value="work-related">Work-Related Injury/illness</md-option>
+              <md-option value="other-property">Other Property Damage</md-option>
+              <md-option value="lost-property">Lost Property Damage</md-option>
+            </md-select>
+      </md-input-container>
+      </div>
+    </div>
+
+
+  </div>
+
+  <hr>
+
+  <div layout="row" layout-align="center center">
+    <!-- Departments -->
+    <label class="md-title">Please Select Department</label>
+    <div layout="column" class="container" layout-align="center center">
+      <form>
+        <input type="radio" ng-model="accidentFormCtrl.formSubmit.department" value="fire-department" id="fire-department">
+        <label for="fire-department">Fire Department</label>
+        <input type="radio" ng-model="accidentFormCtrl.formSubmit.department" value="search-and-rescue" id="search-and-rescue">
+        <label for="search-and-rescue">Search and Rescue</label>
+        <input type="radio" ng-model="accidentFormCtrl.formSubmit.department" value="special-unit" id="special-unit">
+        <label for="special-unit">Special Unit</label>
+        <input type="radio" ng-model="accidentFormCtrl.formSubmit.department" value="hazard" id="hazard"><label for="hazard">Hazard</label>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <h1 class="md-title">Division/Position/Supervisor</h1>
+  <div flex-gt-sm="5"></div>
+  <div layout-gt-sm="row">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Division</label>
+      <input ng-model="accidentFormCtrl.formSubmit.division">
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Positiion</label>
+      <input ng-model="accidentFormCtrl.formSubmit.position">
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Supervisor</label>
+      <input ng-model="accidentFormCtrl.formSubmit.supervisor">
+    </md-input-container>
+  </div>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <h1 class="md-title">Incident</h1>
+  <div flex-gt-sm="5"></div>
+  <div layout-gt-sm="row">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Date of Incident</label>
+      <input ng-model="accidentFormCtrl.formSubmit.dateOfIncident">
+    </md-input-container>
+
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Time of Incident</label>
+      <input ng-model="accidentFormCtrl.formSubmit.timeOfIncident">
+    </md-input-container>
+  </div>
+</div>
+
+
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-header>
+    <md-card-title>Location of Incident</md-card-title>
+  </md-card-header>
+  <div flex-gt-sm="5"></div>
+
+  <md-card-actions align="start|end">
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="Address" ng-model="accidentFormCtrl.formSubmit.locationOfIncidentAddress1"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="Address 2" ng-model="accidentFormCtrl.formSubmit.locationOfIncidentAddress2"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="City" ng-model="accidentFormCtrl.formSubmit.locationOfIncidentCity"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="State" ng-model="accidentFormCtrl.formSubmit.locationOfIncidentState"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="Postal code" ng-model="accidentFormCtrl.formSubmit.locationOfIncidentZip"></textarea>
+    </md-input-container>
+  </md-card-actions>
+</div>
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Were Police Involved ?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <div layout="column" class="container" layout-align="center center">
+    <form>
+      <input type="radio" ng-model="accidentFormCtrl.formSubmit.policeInvolved" value="yes" id="policeInvolvedYes">
+      <label for="policeInvolvedYes">Yes</label>
+      <input type="radio" ng-model="accidentFormCtrl.formSubmit.policeInvolved" value="no" id="policeInvolvedNo">
+      <label for="policeInvolvedNo">No</label>
+    </form>
+  </div>
+
+</div>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>If yes, Please enter Agency, Officer Name and Badge Number</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>Information</label>
+    <input ng-model="accidentFormCtrl.formSubmit.policeInvolvedInfo" />
+  </md-input-container>
+</div>
+<hr>
+
+
+
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Photos of Incident Taken?</md-card-title>
+  <div flex-gt-sm="10"></div>
+  <form>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.photosTaken" value="yes" id="photosTakenYes">
+    <label for="photosTakenYes">Yes</label>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.photosTaken" value="no" id="photosTakenNo">
+    <label for="photosTakenNo">No</label>
+  </form>
+</div>
+
+<br>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>If persons were injured, were paramedics called?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <form>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.paramedicsCalled" value="yes" id="paramedicsCalledYes">
+    <label for="paramedicsCalledYes">Yes</label>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.paramedicsCalled" value="no" id="paramedicsCalledNo">
+    <label for="paramedicsCalledNo">No</label>
+  </form>
+</div>
+
+
+
+
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Name(s) of Injured Employees</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>Names of Injured</label>
+    <input type="text" ng-model="accidentFormCtrl.formSubmit.injuredEmployees"/>
+  </md-input-container>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Nature of Injury</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>Nature of Injury</label>
+    <textarea ng-model="accidentFormCtrl.formSubmit.natureInjury"></textarea>
+  </md-input-container>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Injury in detail</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>Explain Incident in detail</label>
+    <textarea ng-model="accidentFormCtrl.formSubmit.injuryDetail"></textarea>
+  </md-input-container>
+</div>
+
+
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Name(s) of Witnesses</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>List all Known witnesses,including names, addresses and phone numbers</label>
+    <textarea ng-model="accidentFormCtrl.formSubmit.witness"></textarea>
+  </md-input-container>
+</div>
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>City Vehicle Type and Unit Number involved</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>Information</label>
+    <input type="text" ng-model="accidentFormCtrl.formSubmit.vehicleTypeUnitNumber"/>
+  </md-input-container>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Estimate damage to city Equipment</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <form>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.damageAmount" value="Less than $1000" id="1000">
+    <label for="1000">Minor (Less than $1,000)</label>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.damageAmount" value="$1001-$5000" id="1001-5000">
+    <label for="1001-5000">Moderate ($1,001 - $5,000)</label>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.damageAmount" value="$5000+" id="5001">
+    <label for="5001">Major ($5,001 one more)</label>
+  </form>
+  <div flex-gt-sm="5"></div>
+  <label>Briefly describe damage</label>
+  <div flex-gt-sm="5"></div>
+  <textarea ng-model="accidentFormCtrl.formSubmit.damageDescription"></textarea>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-header>
+    <md-card-title>Other Vehicles involved</md-card-title>
+  </md-card-header>
+  <div flex-gt-sm="5"></div>
+  <md-card-actions align="start|end">
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" placeholder="Make" ng-model="accidentFormCtrl.formSubmit.otherVehicleMake"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" placeholder="Model" ng-model="accidentFormCtrl.formSubmit.otherVehicleModel"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" placeholder="Year" ng-model="accidentFormCtrl.formSubmit.otherVehicleYear"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" placeholder="License Plate" ng-model="accidentFormCtrl.formSubmit.otherVehicleLicensePlate"></textarea>
+    </md-input-container>
+  </md-card-actions>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Was Police Driver Ticketed</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <form>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.policeDriverTicketed" value="yes" id="policeDriverTicketedYes">
+    <label for="policeDriverTicketedYes">Yes</label>
+    <input type="radio" ng-model="accidentFormCtrl.formSubmit.policeDriverTicketed" value="no" id="policeDriverTicketedNo">
+    <label for="policeDriverTicketedNo">No</label>
+  </form>
+  <div flex-gt-sm="5"></div>
+  <md-card-title>If yes, Name of Driver and Violation</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container>
+    <label>Information</label>
+    <input type="text" ng-model="accidentFormCtrl.formSubmit.policeDriverInformation"/>
+  </md-input-container>
+</div>
+
+<hr>
+
+<!-- <div layout="row" layout-align="center center">
+  <md-card-title>Estimate damage to third party vehicle or Property</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="" color="primary">Minor(less than $1000)</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="" color="primary">Moderate ($1,000-$5,000)</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="" color="primary">Significant($5,000 or more)</md-checkbox>
+</div>
+<hr>
+<div layout="row" layout-align="center center">
+  <md-card-title>Were you injured?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">YES</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">NO</md-checkbox>
+  <div flex-gt-sm="5"></div>
+  <label>If yes Explain Injury in Detail</label>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Did you receive medical care?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">YES</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">NO</md-checkbox>
+</div>
+<div layout="row" layout-align="center center">
+  <md-card-title>Care Details</md-card-title>
+  <div flex-gt-sm="5"></div>
+  </md-card-header>
+  <md-card-actions align="start|end">
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="Name of Doctor"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="Address of Clinic or Hospital"></textarea>
+    </md-input-container>
+    <md-input-container floatPlaceholder="auto|always|never">
+      <textarea mdInput formControlName="formControlName" required placeholder="Nature of Care"></textarea>
+    </md-input-container>
+  </md-card-actions>
+</div>
+<div layout="row" layout-align="center center">
+  <label>If No care recived,indicate why</label>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div>
+
+<hr>
+<br>
+
+<div layout="row" layout-align="center center">
+  <label>Select Date of Injury</label>
+  <md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+</div>
+
+<hr>
+<div layout="row" layout-align="center center">
+  <label>Number of hours lost on that day</label>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div>
+
+<br>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Will the injury require follow up medical care?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">YES</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">NO</md-checkbox>
+</div>
+
+<br>
+<div layout="row" layout-align="center center">
+  <label>If Yes,please describe</label>
+  <div flex-gt-sm="5"></div>
+  <br>
+  <textarea></textarea>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Were you performing your regular job?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">YES</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">NO</md-checkbox>
+</div>
+<div layout="row" layout-align="center center">
+  <label>If No,indicate what were you doing when you the injury occured</label>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Location Details</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-input-container floatPlaceholder="auto|always|never">
+    <textarea mdInput formControlName="formControlName" required placeholder="Enviroment"></textarea>
+  </md-input-container>
+  <md-input-container floatPlaceholder="auto|always|never">
+    <textarea mdInput formControlName="formControlName" required placeholder="Road Conditions"></textarea>
+  </md-input-container>
+  <md-input-container floatPlaceholder="auto|always|never">
+    <textarea mdInput formControlName="formControlName" required placeholder="Lighting"></textarea>
+  </md-input-container>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Was the Location Details a factor in the Accident/Injury/Damage?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">YES</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">NO</md-checkbox>
+</div>
+<div layout="row" layout-align="center center">
+  <label>If Yes explain how.</label>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-title>Was the accident/injury/damage preventable?</md-card-title>
+  <div flex-gt-sm="5"></div>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">YES</md-checkbox>
+  <md-checkbox [(ngModel)]="modelName" value="default" color="default">NO</md-checkbox>
+</div>
+<div layout="row" layout-align="center center">
+  <label>If Yes explain how.</label>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div>
+
+<hr>
+
+<div layout="row" layout-align="center center">
+  <md-card-header>
+    Other Third parties injured?
+  </md-card-header>
+</div>
+
+<br>
+
+<div layout="row" layout-align="center center">
+  <md-card-actions align="start|end">
+    List all Known witnesses,including names, addresses and phone numbers
+  </md-card-actions>
+  <div flex-gt-sm="5"></div>
+  <textarea></textarea>
+</div> -->
+
+<br><br>
+
+<div layout="column" layout-align="center center">
+  <md-button class="md-raised md-primary" ng-click="accidentFormCtrl.submit(accidentFormCtrl.formSubmit)">Submit Form</md-button>
+</div>

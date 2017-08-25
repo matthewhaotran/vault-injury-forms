@@ -1,0 +1,453 @@
+<div layout="column" layout-align="center center">
+    <h3 class="md-display-5">Emergency Response Employee Report (Communicable Disease)</h3>
+</div>
+
+<div layout="column" class="container" layout-align="center center">
+    <form>
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="KHN">KHN
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="KHS">KHS
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="MHS">MHS
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="MGH">MGH
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="MHF">MHF
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="MSJ">MSJ
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="SMH">SMH
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="SGH">SGH
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="UCD">UCD
+        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.acronym" value="OTHERACRONYM">Other
+        <input type="text" ng-show="emergencyResponseEmployeeReportCtrl.formSubmit.acronym === 'OTHERACRONYM'" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.OTHERACRONYM1">
+    </form>
+</div>
+
+<div layout="container" layout-align="center center">
+    <h3>Emergency Response</h3>
+</div>
+<div layout="container" layout-align="center center">
+    <div layout="column" ng-cloak class="md-inline-form">
+
+        <md-content layout-padding>
+            <div>
+                <form name="userForm">
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERfirstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last Name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERlastName">
+                        </md-input-container>
+                    </div>
+
+                    <md-input-container class="md-block">
+                        <label>Address 1</label>
+                        <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERaddress1">
+                    </md-input-container>
+
+                    <md-input-container class="md-block">
+                        <label>Address 2</label>
+                        <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERaddress2">
+                    </md-input-container>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>City</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERcity">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>State</label>
+                            <md-select ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERstate">
+                                <md-option value="CA">
+                                    CA
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Postal Code</label>
+                            <input name="postalCode" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERzip" placeholder="12345" required ng-pattern="/^[0-9]{5}$/"
+                                md-maxlength="5">
+                        </md-input-container>
+                    </div>
+                    <md-input-container class="md-block">
+                        <label>Home Phone Number</label>
+                        <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERhomePhone">
+                    </md-input-container>
+
+
+
+                </form>
+            </div>
+        </md-content>
+
+    </div>
+    <div layout="column" ng-cloak class="md-inline-form">
+
+        <md-content layout-padding>
+            <div>
+                <form name="userForm">
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Incident Date</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERincidentDate">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Incident Number</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERincidentNumber">
+                        </md-input-container>
+                    </div>
+
+                    <md-input-container class="md-block">
+                        <label>Employer/Dept.</label>
+                        <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployerDept">
+                    </md-input-container>
+
+                    <md-input-container class="md-block">
+                        <label>Employer Addreess</label>
+                        <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeAddress">
+                    </md-input-container>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>City</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeCity">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>State</label>
+                            <md-select ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeState">
+                                <md-option value="CA">
+                                    CA
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Postal Code</label>
+                            <input name="postalCode" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeZip" placeholder="12345" required
+                                ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                        </md-input-container>
+                    </div>
+                    <md-input-container class="md-block">
+                        <label>Employer Phone Number</label>
+                        <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployerPhone">
+                    </md-input-container>
+
+
+
+                </form>
+            </div>
+        </md-content>
+
+    </div>
+</div>
+
+<div layout="column" layout-align="center center">
+    <h3>Source Patient</h3>
+</div>
+<div layout="container" layout-align="center center">
+    <div layout="column" ng-cloak class="md-inline-form">
+
+        <md-content layout-padding>
+            <div>
+                <form name="userForm">
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.user.firstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last Name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.user.lastName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Social Security Number</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.user.ssn">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Home Phone Number</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.user.homePhone">
+                        </md-input-container>
+                    </div>
+
+                </form>
+            </div>
+        </md-content>
+
+    </div>
+</div>
+
+<div layout="column" layout-align="center center">
+    <h3>Additional Emergency Response Employees Potentially Exposed</h3>
+</div>
+<div layout="container" layout-align="center center">
+    <div layout="column" ng-cloak class="md-inline-form">
+
+        <md-content layout-padding>
+            <div>
+                <form name="userForm">
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE1firstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last Name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE1lastName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Employer/Dept</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE1employerDept">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Unit #</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE1unitNumber">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Employer Phone Number</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE1employerPhone">
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE2firstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last Name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE2lastName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Employer/Dept</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE2employerDept">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Unit #</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE2unitNumber">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Employer Phone Number</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE2employerPhone">
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE3firstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last Name</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE3lastName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Employer/Dept</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE3employerDept">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Unit #</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE3unitNumber">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Employer Phone Number</label>
+                            <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.EPE3employerPhone">
+                        </md-input-container>
+                    </div>
+
+                </form>
+            </div>
+        </md-content>
+
+    </div>
+</div>
+
+<div layout="column" layout-align="center center">
+    <h3>Exposed To</h3>
+</div>
+<div layout="column" class="container" layout-align="center center">
+    <div layout="row" layout-align="center center">
+        <form>
+            <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo" value="HIV/AIDs" id="hivaids">
+            <label for="hiv">HIV/AIDs</label><br>
+            <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo" value="Hepatitis" id="hepatitis">
+            <label for="hepatitis">Hepatitis</label><br>
+            <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo" value="Meningitis" id="meningitis">
+            <label for="meningitis">Meningitis</label><br>
+            <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo" value="Needle Stick" id="needle-stick">
+            <label for="needle-stick">Needle Stick</label><br>
+            <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo" value="TB" id="tb">
+            <label for="tb">TB</label><br>
+            <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo" value="OTHEREXPOSEDTO" id="OTHEREXPOSEDTO">
+            <label for="other">Other</label>
+            <input type="text" ng-show="emergencyResponseEmployeeReportCtrl.formSubmit.exposedTo === 'OTHEREXPOSEDTO'" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.OTHEREXPOSEDTO1">
+        </form>
+    </div>
+</div>
+
+<div layout="row" layout-align="center center">
+    <h3>Level of Exposure </h3>
+    <p> (Refer to Exposure Policy for further assistance if needed)</p>
+</div>
+
+<div class="md-padding" ng-cloak>
+    <div>
+        <fieldset class="standard">
+            <legend>Level of Exposure</legend>
+            <div layout-wrap layout-gt-sm="row">
+                <div flex-gt-sm="80">
+                    <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.levelOfExposure" value="1" id="level1">
+                    <label for="level1">Close proximity to person suspected of having communcable disease - no action required.</label><br>
+                    <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.levelOfExposure" value="2" id="level2">
+                    <label for="level2">Contamination of clothing, equipment, and/or unprotected intat skin - no hospital intervention.</label><br>
+                    <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.levelOfExposure" value="3" id="level3">
+                    <label for="level3">Contact with patient's bodily fluids or droplets (TB) through non-intact skin, needle stick,
+                                needle stick, mucous membrane or conjunctival (eye) membranes - workers' compensation paperwork
+                                required.</label><br>
+                </div>
+            </div>
+            <p>Explanation: </p>
+            <div layout-wrap layout-gt-sm="row">
+                <textarea rows="" cols="" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.explanation"></textarea>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="md-padding" ng-cloak>
+    <div>
+        <fieldset class="standard">
+            <div layout-wrap layout-gt-sm="row">
+                <div flex-gt-sm="100">
+                    <p>It has been determined that the emergenct response employee named above sustained a Level III exposure.
+                        Please determine if the source pateint above has or is suspected of having a potentially life-threatening
+                        or transmissible communicable disease. I am requesting that, if needed, blood be drawn from the source
+                        patient to assist in this determination.</p>
+                    <form name="userForm">
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Requested By</label>
+                                <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.requestedBy">
+                            </md-input-container>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div layout="row" layout-align="center center">
+    <h3>Hospital Follow-up </h3>
+</div>
+
+
+<div class="md-padding" ng-cloak>
+    <div>
+        <fieldset class="standard">
+            <div layout="row" layout-align="center center">
+                <div class="md-padding" ng-cloak>
+                    <form>
+                        <input type="checkbox" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.noDisease" value="true">No
+                        reportable communicable disease identififed
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="md-padding" ng-cloak>
+    <div>
+        <fieldset class="standard">
+            <div layout="row" layout-align="center center">
+                <div class="md-padding" ng-cloak>
+                    <form>
+                        Emergency response employee notified:
+                        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeNotified" value="no">No
+                        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeNotified" value="yes">Yes
+                        <input type="text" ng-show="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeNotified === 'yes'" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.ERemployeeNotifiedName">
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="md-padding" ng-cloak>
+    <div>
+        <fieldset class="standard">
+            <div layout="row" layout-align="center center">
+                <div class="md-padding" ng-cloak>
+                    <form>
+                        Employer Designated Officer (DO) notified:
+                        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.DOnotified" value="no">No
+                        <input type="radio" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.DOnotified" value="yes">Yes
+                        <input type="text" ng-show="emergencyResponseEmployeeReportCtrl.formSubmit.DOnotified === 'yes'" ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.DOnotifiedName">
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="md-padding" ng-cloak>
+    <div>
+        <fieldset class="standard">
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Date of Notification</label>
+                    <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.dateOfNotification">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Name and title of person making notification</label>
+                    <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.nameTitle">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Signature</label>
+                    <input ng-model="emergencyResponseEmployeeReportCtrl.formSubmit.signature">
+                </md-input-container>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div layout="row" layout-align="center center">
+    <p><em>Note: </em>TB cultures can take 4-6 weeks. You will be notified if results are positive. True exposure to meningitis
+        requires contact with oro-pharyngeal secreation (i.e. mouth-to-mouth resuscitation, kissing, sprayed with secretions
+        while intubating without wearing goggles.</p>
+    <p>Fire Dispatch (916-228-3035) has a current listing of Designated Officers for Emergency Response Employees</p>
+</div>
+
+<div layout="column" layout-align="center center">
+    <md-button class="md-raised md-primary" ng-click="emergencyResponseEmployeeReportCtrl.submit(emergencyResponseEmployeeReportCtrl.formSubmit)">Submit Form</md-button>
+</div>
+
+<br><br>
+
+<pre>
+{{emergencyResponseEmployeeReportCtrl | json}}
+</pre>

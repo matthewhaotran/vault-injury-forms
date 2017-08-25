@@ -1,0 +1,152 @@
+<div layout="row">
+    <div flex-gt-sm="5"></div>
+    <div flex-gt-sm="90">
+        <h1>Please Review your information and confirm</h1>
+
+        <table class="table">
+            <tr>
+                <td>First Name</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.firstName}}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.lastName}}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.address1}} {{accidentFormConfirmationCtrl.accidentForm.address2}}
+                    <br> {{accidentFormConfirmationCtrl.accidentForm.city}}, {{accidentFormConfirmationCtrl.accidentForm.state}}
+                    {{accidentFormConfirmationCtrl.accidentForm.zip}}
+                </td>
+            </tr>
+            <tr>
+                <td>Social Security Number</td>
+                <td>***-**-****</td>
+            </tr>
+            <tr>
+                <td>Home Phone</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.homePhone}}</td>
+            </tr>
+            <tr>
+                <td>Work Phone</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.workPhone}}</td>
+            </tr>
+            <tr>
+                <td>Location of Incident</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.locationfOfIncident}}
+                </td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.department}}
+                </td>
+            </tr>
+            <tr>
+                <td>Division</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.division}}</td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.position}}</td>
+            </tr>
+            <tr>
+                <td>Supervisor</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.supervisor || N/A}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of Incident
+                </td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.dateOfIncident || N/A}}
+                </td>
+            </tr>
+            <tr>
+                <td>Time of Incident</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.timeOfIncident || N/A}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Location of Incident
+                </td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.locationOfIncidentAddress1}} {{accidentFormConfirmationCtrl.accidentForm.locationOfIncidentAddress2}}
+                    <br> {{accidentFormConfirmationCtrl.accidentForm.locationOfIncidentCity}}, {{accidentFormConfirmationCtrl.accidentForm.locationOfIncidentState}}
+                    {{accidentFormConfirmationCtrl.accidentForm.locationOfIncidentZip}}
+                </td>
+            </tr>
+            <tr>
+                <td>Was police involved</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.policeInvolved || N/A}}
+            </tr>
+            <tr>
+                <td>
+                    If yes, information:
+                </td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.policeInvolvedInfo || N/A}}
+                </td>
+            </tr>
+            <tr>
+                <td>Were photos taken?</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.photosTaken}}</td>
+            </tr>
+            <tr>
+                <td>Paramedics called?</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.paramedicsCalled}}</td>
+            </tr>
+            <tr>
+                <td>Injured Employees</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.injuredEmployees}}</td>
+            </tr>
+            <tr>
+                <td>Nature of the Injury</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.natureInjury}}</td>
+            </tr>
+            <tr>
+                <td>Injury Details</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.injuryDetail}}</td>
+            </tr>
+            <tr>
+                <td>City vehicle type and unit number involved</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.vehicleTypeUnitNumber}}</td>
+            </tr>
+            <tr>
+                <td>Damage Amount</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.damageAmount}}</td>
+            </tr>
+            <tr>
+                <td>Other Vehicle Make:</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.otherVehicleMake}}</td>
+            </tr>
+            <tr>
+                <td>Other Vehicle Model:</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.otherVehicleModel}}</td>
+            </tr>
+            <tr>
+                <td>Other Vehicle Year:</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.otherVehicleYear}}</td>
+            </tr>
+            <tr>
+                <td>Other Vehicle Plate:</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.otherVehicleLicensePlate}}</td>
+            </tr>
+            <tr>
+                <td>Nature of the Injury</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.natureInjury}}</td>
+            </tr>
+            <tr>
+                <td>Police Driver Ticketed?</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.policeDriverTicketed}}</td>
+            </tr>
+            <tr>
+                <td>If so, name of driver</td>
+                <td>{{accidentFormConfirmationCtrl.accidentForm.policeDriverInformation}}</td>
+            </tr>
+        </table>
+
+        <div layout="column" layout-align="center center">
+            <md-button class="md-raised md-primary" ng-click="accidentFormConfirmationCtrl.saveForm(accidentFormConfirmationCtrl.accidentForm)">Print Form</md-button>
+        </div>
+    </div>
+    <div flex-gt-sm="5"></div>
+</div>

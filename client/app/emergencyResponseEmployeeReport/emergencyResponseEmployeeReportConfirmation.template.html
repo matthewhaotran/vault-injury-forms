@@ -1,0 +1,119 @@
+<div layout="row">
+  <div flex-gt-sm="5"></div>
+  <div flex-gt-sm="90">
+    <h1>Please Review your information and confirm</h1>
+    <table class="table">
+      <tr>
+        <td>First Name</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.firstName}}</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.lastName}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.address1}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.address2}}
+          <br> {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.city}}, {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.state}}
+          {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.zip}}
+        </td>
+      </tr>
+      <tr>
+        <td>Social Security Number</td>
+        <td>***-**-****</td>
+      </tr>
+      <tr>
+        <td>Home Phone</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.homePhone}}</td>
+      </tr>
+      <tr>
+        <td>Work Phone</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.workPhone}}</td>
+      </tr>
+      <tr>
+        <td>Employee Response Name</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERfirstName}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERlastName}}
+        </td>
+      </tr>
+      <tr>
+        <td>Employee Response Address</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERaddress1}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERaddress2}}
+          <br> {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERcity}}, {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.state}}
+          {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.zip}}
+        </td>
+      </tr>
+      <tr>
+        <td>Incident Date</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERincidentDate}}</td>
+      </tr>
+      <tr>
+        <td>Incident Number</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.ERincidentNumber}}</td>
+      </tr>
+      <tr>
+        <td>Employee Potentially Exposed 1</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE1firstName || N/A}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE1lastName}}
+          (Unit Number: {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE1unitNumber
+          || N/A}} )
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Employer and Employer Phone
+        </td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE1employerDept || N/A}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE1employerPhone}}
+        </td>
+      </tr>
+      <tr>
+        <td>Employee Potentially Exposed 2</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE2firstName || N/A}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE2lastName}}
+          (Unit Number: {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE2unitNumber
+          || N/A}} )
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Employer and Employer Phone
+        </td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE2employerDept || N/A}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE2employerPhone}}
+        </td>
+      </tr>
+      <tr>
+        <td>Employee Potentially Exposed 3</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE3firstName || N/A}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE3lastName}}
+          (Unit Number: {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE3unitNumber
+          || N/A}} )
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Employer and Employer Phone
+        </td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE3employerDept || N/A}} {{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.EPE3employerPhone}}
+        </td>
+      </tr>
+      <tr>
+        <td>Exposed To</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.exposedTo}}</td>
+      </tr>
+      <tr>
+        <td>Level of Exposure</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.levelOfExposure}}</td>
+      </tr>
+      <tr>
+        <td>Explanation</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.explanation}}</td>
+      </tr>
+      <tr>
+        <td>Requested By</td>
+        <td>{{emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport.requestedBy}}</td>
+      </tr>
+    </table>
+
+    <div layout="column" layout-align="center center">
+      <md-button class="md-raised md-primary" ng-click="emergencyResponseEmployeeReportConfirmationCtrl.saveForm(emergencyResponseEmployeeReportConfirmationCtrl.emergencyResponseEmployeeReport); emergencyResponseEmployeeReportConfirmationCtrl.success()">Print Form</md-button>
+    </div>
+  </div>
+  <div flex-gt-sm="5"></div>
+</div>
+

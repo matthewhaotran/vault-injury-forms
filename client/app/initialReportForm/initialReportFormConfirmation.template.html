@@ -1,0 +1,152 @@
+<div layout="row">
+    <div flex-gt-sm="5"></div>
+    <div flex-gt-sm="90">
+        <h1>Please Review your information and confirm</h1>
+        <table class="table">
+            <tr>
+                <td>First Name</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.firstName}}</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.lastName}}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.address1}} {{initialReportFormConfirmationCtrl.initialReportForm.address2}}
+                    <br> {{initialReportFormConfirmationCtrl.initialReportForm.city}}, {{initialReportFormConfirmationCtrl.initialReportForm.state}}
+                    {{initialReportFormConfirmationCtrl.initialReportForm.zip}}
+                </td>
+            </tr>
+            <tr>
+                <td>Social Security Number</td>
+                <td>***-**-****</td>
+            </tr>
+            <tr>
+                <td>Home Phone</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.homePhone}}</td>
+            </tr>
+            <tr>
+                <td>Mobile Phone</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.mobilePhone}}</td>
+            </tr>
+            <tr>
+                <td>Work Phone</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.workPhone}}</td>
+            </tr>
+            <tr>
+                <td>Claim Number</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.claimantId}}
+                </td>
+            </tr>
+            <tr>
+                <td>Alternate Claim Number</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.alternateClaimNumber}}
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.gender}}
+                </td>
+            </tr>
+            <tr>
+                <td>Personal E-mail</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.personalEmail}}
+                </td>
+            </tr>
+            <tr>
+                <td>Work E-mail</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.workEmail}}
+                </td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.location}}
+                </td>
+            </tr>
+            <tr>
+                <td>Location 2</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.location2}}
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Loss</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.dateOfLoss}}
+                </td>
+            </tr>
+            <tr>
+                <td>Date Reported</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.dateReported}}
+                </td>
+            </tr>
+            <tr>
+                <td>Coverage Code</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.covgCode}}
+                </td>
+            </tr>
+            <tr>
+                <td>Report Type</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.reportType}}
+                </td>
+            </tr>
+            <tr>
+                <td>Id Type</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.idType}}
+                </td>
+            </tr>
+            <tr>
+                <td>Employee ID</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.employeeId}}
+                </td>
+            </tr>
+            <tr>
+                <td>Loss Cause</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.lossCause}}
+                </td>
+            </tr>
+            <tr>
+                <td>Loss Type</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.lossType}}
+                </td>
+            </tr>
+            <tr>
+                <td>Body Part</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.bodyPart}}
+                </td>
+            </tr>
+            <tr>
+                <td>Accident State</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.accidentState}}
+                </td>
+            </tr>
+            <tr>
+                <td>State of Jurisdiction</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.stateOfJurisdiction}}
+                </td>
+            </tr>
+            <tr>
+                <td>Accident Location</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.accidentLocation}}
+                </td>
+            </tr>
+            <tr>
+                <td>Drivers License Plate</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.driversLicenseNum}}
+                </td>
+            </tr>
+            <tr>
+                <td>Drivers License State</td>
+                <td>{{initialReportFormConfirmationCtrl.initialReportForm.driversLicenseState}}
+                </td>
+            </tr>
+            
+            
+        </table>
+
+        <div layout="column" layout-align="center center">
+            <md-button class="md-raised md-primary" ng-click="initialReportFormConfirmationCtrl.saveForm(initialReportFormConfirmationCtrl.initialReportForm)">Print Form</md-button>
+        </div>
+    </div>
+    <div flex-gt-sm="5"></div>
+</div>
+

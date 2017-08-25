@@ -1,0 +1,74 @@
+<div layout="row">
+    <div flex-gt-sm="5"></div>
+    <div flex-gt-sm="90">
+        <h1>Please Review your information and confirm</h1>
+        <table class="table">
+            <tr>
+                <td>Date</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.date | date:'longDate'}}</td>
+            </tr>
+            <tr>
+                <td>Last Kaiser DOI</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.kaiserDoi}}</td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.employeeName}}
+                </td>
+            </tr>
+            <tr>
+                <td>Social Security Number</td>
+                <td>***-**-****</td>
+            </tr>
+            <tr>
+                <td>Employer Contact Person</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.employerContactPerson}}</td>
+            </tr>
+            <tr>
+                <td>Employer</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.employer}}</td>
+            </tr>
+            <tr>
+                <td>Employers Insurance Carrier</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.employersInsuranceCarrier}}
+                </td>
+            </tr>
+            <tr>
+                <td>Physicals</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.physicals}}
+                </td>
+            </tr>
+            <tr>
+                <td>Contact Name Title</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.contactNameTitle}}</td>
+            </tr>
+            <tr>
+                <td>Contact Phone</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.contactPhone}}</td>
+            </tr>
+            <tr>
+                <td>Contact Fax</td>
+                <td>{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.contactFax}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Employee Work Hours
+                </td>
+                <td>FROM {{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.timeStart | date:'shortTime'}} TO {{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob.timeEnd | date:'shortTime'}}
+                </td>
+            </tr>
+        </table>
+
+        <div layout="column" layout-align="center center">
+            <md-button class="md-raised md-primary" ng-click="kaiserOnTheJobConfirmationCtrl.saveForm(kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob); kaiserOnTheJobConfirmationCtrl.success()">Print Form</md-button>
+        </div>
+    </div>
+    <div flex-gt-sm="5"></div>
+</div>
+
+
+
+<pre>
+{{kaiserOnTheJobConfirmationCtrl.kaiserOnTheJob | json}}
+</pre>

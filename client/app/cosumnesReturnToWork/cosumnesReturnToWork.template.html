@@ -1,0 +1,210 @@
+<pre>
+    {{cosumnesReturnToWorkCtrl | json}}
+</pre>
+
+<div layout="column" layout-align="center center">
+    <h3 class="md-display-5">Cosumnes CSD Fire Department - Return To Work Form</h3>
+</div>
+
+<div class="container" flex-offset="5">
+    <md-input-container class="md-icon-float md-block">
+        <label>First Name</label>
+        <input ng-model="cosumnesReturnToWorkCtrl.formSubmit.firstName" type="text">
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block">
+        <label>Last Name</label>
+        <input ng-model="cosumnesReturnToWorkCtrl.formSubmit.lastName" type="text">
+    </md-input-container>
+</div>
+
+<div class="container" flex-offset="5">
+
+    <h4>Physician's Checklist</h4>
+    <p flex="95">Your patient is required to have a signed release to return to work after an injury or extended illness. To ensure that
+        he/she can perform his/her job as a firefighter with average efficiency, a job performance checklist is provided
+        for you to evaluate them. Please respond to all of the questions that may apply to the patient's specific injury
+        or illness.
+    </p>
+
+</div>
+
+<div class="container" flex-offset="5">
+    <ol>
+        <li>
+            <p flex="100">Can the firefighter descent from an elevated area of approximately 3-4 feet?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q1">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter operate vehicles under emergency conditions?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q2">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefight work while wearing protective clothing, including SCBA weighing approximately 50 lbs. combined
+                and carry an additional 20-40 lbs of equipment?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q3">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter work in high places, such as rooftops, where a sense of balance is needed?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q4">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter crawl on hands and knees?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q5">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter climb up and down ladders and stairs with clothing and equipment as described in item 3?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q6">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the fight pull heavy objects such as a person (approx. 165 lbs.) from a hazardous condition?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q7">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter work in an environment, while wearing protective clothing, including SCBA, where they mau
+                experience significant fluid loss and elevation of core temperature in excess of 102.2 degrees Farenheit?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q8">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter work in a confined space such as the attic or crawl space of a structure?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q9">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter lift, as a member of a two person team, a gurney into an ambulance?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q10">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter grip ropes and tools with gloved hands?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q11">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter use appropriate tools to pull down ceiling or walls requiring his/her arms to be above his/her
+                head?
+            </p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q12">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter cut or chop holes in roofs, walls, and floors using an axe?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q13">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Can the firefighter, as a member of a team, lift a ladder weighing 75 lbs off of a truck ro from the ground?</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q14">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+        <li>
+            <p flex="100">Based on your clinical findings, and in your best medical opinion, is the firefighter currently capable of performing
+                the essential duties as described herein without restriction? If not, please provide the specifics below.</p>
+            <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q15">
+                <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+                <md-radio-button value="No">No</md-radio-button>
+                <md-radio-button value="N/A">N/A</md-radio-button>
+            </md-radio-group>
+        </li>
+    </ol>
+
+    <p>If the firefighter is not able to return to full duty without restriction, due to medical reasons, please detail the
+        retrictions.
+    </p>
+    <textarea ng-model="cosumnesReturnToWorkCtrl.formSubmit.detailRestriction"></textarea>
+
+    <br><br><br>
+
+    <md-radio-group ng-model="cosumnesReturnToWorkCtrl.formSubmit.q16">
+        <md-radio-button value="The firefighter will be able to work on a restricted light duty">The firefighter will be able to work on a restricted light duty</md-radio-button>
+        <md-radio-button value="The firefighter will be fit for unrestricted full duty">The firefighter will be fit for unrestricted full duty</md-radio-button>
+    </md-radio-group>
+
+    <div layout="column" ng-cloak class="md-inline-form">
+
+        <md-content layout-padding>
+            <div>
+                <form name="userForm">
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Physician Name</label>
+                            <input ng-model="cosumnesReturnToWorkCtrl.formSubmit.physicianName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Physician Address</label>
+                            <input ng-model="cosumnesReturnToWorkCtrl.formSubmit.physicianAddress">
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Physician Signature</label>
+                            <input ng-model="cosumnesReturnToWorkCtrl.formSubmit.physicianFirstName">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Date</label>
+                            <input ng-model="cosumnesReturnToWorkCtrl.formSubmit.dateSigned">
+                        </md-input-container>
+                    </div>
+
+                </form>
+            </div>
+        </md-content>
+
+    </div>
+    <div layout="column" layout-align="center center">
+        <md-button class="md-raised md-primary" ng-click="cosumnesReturnToWorkCtrl.submit()">Next</md-button>
+    </div>
+</div>

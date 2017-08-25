@@ -1,0 +1,264 @@
+<div layout="row" style="margin: 0px auto 0px auto; margin-bottom: 2em">
+    <div flex-gt-sm="10"></div>
+    <md-card flex="100" style='background-color: lightgray; height: 100%'>
+        <h3 style="text-align: center; padding-top:1em; margin-top: 1em; margin-bottom: 2em">SACRAMENTO AREA/FOLSOM/ROSEVILLE/SACRAMENTO/SOUTH SACRAMENTO</h3>
+    </md-card>
+    <div flex-gt-sm="10"></div>
+</div>
+<div>
+    <h1 style="text-align: center; margin-top: 1em">KAISER ON-THE-JOB
+        <font size="-2">®</font>
+    </h1>
+</div>
+<div>
+    <h3 style="text-align: center;margin-top: -1em">Occupational Health Treatment Referral Form</h3>
+</div>
+<div>
+    <div style="text-align: center">
+        To ensure timely treatment, please call ahead for injury care and
+        <br> drug testing services. Physical exams are by appointment only.
+    </div>
+</div>
+<hr>
+
+<md-content class="md-no-momentum">
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">DATE</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.date" type="date" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">DOI</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.kaiserDoi" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">EMPLOYEE'S NAME</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.employeeName" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">EMPLOYER</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.employer" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="5"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">EMPLOYER'S CONTACT PERSON</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.employerContactPerson" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="5"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">EMPLOYER'S INSURANCE CARRIER</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.employersInsuranceCarrier" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex-gt-sm="50" style="text-align: center; padding-top: 2em">
+            JOB DESCRIPTION FOR PHYSICALS (PLEASE CHECK ONE):
+        </div>
+        <md-radio-group layout="row" style='padding-top: 2em; margin-bottom: 1em' ng-model="kaiserOnTheJobCtrl.formSubmit.physicals">
+            <div flex></div>
+            <md-radio-button value="Attached">ATTACHED</md-radio-button>
+            <div flex></div>
+            <md-radio-button value="On File">ON FILE</md-radio-button>
+            <div flex></div>
+        </md-radio-group>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div style="text-align: center; padding-top: 2em; padding-right: 1em">
+            EMPLOYEE SIGNATURE
+        </div>
+        <div style="margin-top: 1em;margin-bottom:2em; width:500px;height:50px;border:1px solid #000;"></div>
+        <div flex></div>
+    </div>
+    <hr>
+
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">CONTACT NAME/TITLE</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.contactNameTitle" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">CONTACT PHONE</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.contactPhone" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">CONTACT FAX</label>
+                <input ng-model="kaiserOnTheJobCtrl.formSubmit.contactFax" type="text" required>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div style="text-align: center; padding-top: 2em; padding-right: 1em">
+            EMPLOYEE WORK HOURS:
+        </div>
+        <div flex-gt-sm="5"></div>
+        <div style="text-align: center; padding-top: 2em; padding-right: 1em">
+            FROM
+        </div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">TIME START</label>
+            <input ng-model="kaiserOnTheJobCtrl.formSubmit.timeStart" type="time">
+        </md-input-container>
+        <div style="text-align: center; margin-left: 1em; padding-top: 2em; padding-right: 1em">
+            TO
+        </div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">TIME END</label>
+            <input ng-model="kaiserOnTheJobCtrl.formSubmit.timeEnd" type="time">
+        </md-input-container>
+        <div flex></div>
+    </div>
+    <div style="text-align: center; margin-bottom: 1em">
+        To reorder referral forms, call <strong>1-888-KOJ-WORK</strong>
+        <br>
+        <strong>(1-888-565-9675)</strong> and select option <strong>1.</strong>
+    </div>
+    <hr>
+
+    <h3 style="text-align: center;margin-top: 1em; color: #B38A81;">
+        DEDICATED OCCUPATIONAL HEALTH CENTERS
+    </h3>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-card flex="50" style='background-color: #B38A81; height: 100%'>
+            <div style="text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 1em">
+                <strong>South Sacramento Medical Center</strong><br> Building 3, 2nd Floor<br> 6600 Bruceville Road<br> Sacramento,
+                CA 95823<br>
+                <strong>916-688-2005</strong><br> Hours: Mon-Fri, 8:30a.m.-5:00p.m.
+            </div>
+        </md-card>
+        <div flex-gt-sm="5"></div>
+        <md-card flex="50" style='background-color: #B38A81; height: 100%'>
+            <div style="text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 1em">
+                <strong>Roseville Medical Center</strong><br> Building C, 1st Floor<br> 1600 Eureka Road<br> Roseville, CA
+                95661
+                <br>
+                <strong>916-784-4100</strong><br> Hours: Mon-Fri, 8:30a.m.-5:00p.m.
+            </div>
+        </md-card>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto; margin-bottom: 2em">
+        <div flex-gt-sm="10"></div>
+        <md-card flex="50" style='background-color: #B38A81; height: 100%'>
+            <div style="text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 1em">
+                <strong>Sacramento Medical Center</strong><br> 2016 Morse Ave.<br> Sacramento, CA 95825<br>
+                <strong>916-973-5499</strong><br> Hours: Mon-Fri, 8:30a.m.-5:00p.m.
+            </div>
+        </md-card>
+        <div flex-gt-sm="5"></div>
+        <md-card flex="50" style='background-color: #B38A81; height: 100%'>
+            <div style="text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 1em">
+                <strong>Folsom Medical Offices</strong><br> 2155 Iron Point Road, 2nd Floor<br> Folsom, CA 95630<br>
+                <strong>916-817-5660</strong><br> Hours: Mon-Fri, 8:30a.m.-5:00p.m.
+            </div>
+        </md-card>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div style="text-align: center">
+        If you go anywhere other tham Kaiser South, please let HR know.
+    </div>
+    <div style="text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 1em">
+        Holidays closed: Martin Luther King Jr. Day; Presidents' Day; <br> Memorial Day; Independence Day; Labor Day; Thanksgiving
+        Day;
+        <br> Dec. 24-25 (Christmas observed); Dec. 31 (New Year's Eve); New Year's Day<br> Note: South Sacramento Medical
+        Center is open Dec. 24 and Dec 31.
+    </div>
+    <div layout="row">
+        <div flex-gt-sm="10"></div>
+        <div style="margin: 0px auto 0px auto">
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button ng-click="kaiserOnTheJobCtrl.submit(kaiserOnTheJobCtrl.formSubmit)" class="md-raised md-warn">Submit Claim</md-button>
+            </section>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row">
+        <div flex-gt-sm="10"></div>
+        <div style="margin: 0px auto 0px auto">
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button ng-click="kaiserOnTheJobCtrl.cancelBtn()" class="md-raised md-warn">Cancel Changes</md-button>
+            </section>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+
+</md-content>
+
+<pre>
+    {{kaiserOnTheJobCtrl | json}}
+</pre>
+
+
+<!-- Content
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>E-Signature</h1>
+				<p>Sign in the canvas below and save your signature as an image!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+		 		<canvas id="sig-canvas" style="border: 2px dotted #CCCCCC; border-radius: 15px; cursor: crosshair;" width="620" height="160">
+		 			Get a better browser, bro.
+		 		</canvas>
+		 	</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<button class="btn btn-primary" id="sig-submitBtn">Submit Signature</button>
+				<button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-md-12">
+				<textarea id="sig-dataUrl" class="form-control" rows="5">Data URL for your signature will go here!</textarea>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-md-12">
+				<img id="sig-image" src="" alt="Your signature will go here!"/>
+			</div>
+		</div>
+	</div> -->

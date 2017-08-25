@@ -1,0 +1,54 @@
+<div layout="column" layout-align="center center">
+    
+        <div class="md-padding" ng-cloak>
+            <div>
+                <h1 class="md-title">Select City/County</h1>
+                <div layout="row">
+                    <md-input-container>
+                        <label>City/County</label>
+                        <md-select ng-model="selectedCounty">
+                            <md-option value="littletonCO">Litteton, Colorado</md-option>
+                            <md-option value="cosumnesCA">Cosumnes, California</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+    
+        <div class="md-padding" ng-cloak ng-show="selectedCounty=='littletonCO'">
+            <div>
+                <h1 class="md-title">Select Form</h1>
+                <div layout="row">
+                    <md-input-container>
+                        <label>Form</label>
+                        <md-select ng-model="selectFormCtrl.selectedForm">
+                            <md-option value="accidentForm">Accident Form</md-option>
+                            <md-option value="initialReportForm">Initial Report Form</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+    
+        <div class="md-padding" ng-cloak ng-show="selectedCounty=='cosumnesCA'">
+            <div>
+                <h1 class="md-title">Select Form</h1>
+                <div layout="row">
+                    <md-input-container>
+                        <label>Form</label>
+                        <md-select ng-model="selectFormCtrl.selectedForm">
+                            <md-option value="kaiserOnTheJob">Kaiser</md-option>
+                            <md-option value="cosumnesReturnToWork">Cosumnes CSD Fire Department Return To Work Form</md-option>
+                            <md-option value="emergencyResponseEmployeeReport">Emergency Response Emplyee Report (Communicable Disease)</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+    
+        <md-button class="md-raised md-primary" ng-click="selectFormCtrl.goToForm(selectFormCtrl.selectedForm)">Select Form</md-button>
+    
+    </div>
+    <pre>
+        {{selectFormCtrl | json}}
+    </pre>

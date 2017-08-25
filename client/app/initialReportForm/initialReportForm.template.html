@@ -1,0 +1,838 @@
+<h1 style="text-align: center; margin-bottom: 0">Initial Report Form</h1>
+<h4 style="text-align: center; margin-top: 0">(CITY OF LITTLETON)</h4>
+<hr>
+
+<md-content class="md-no-momentum">
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">General Information</h3>
+    <div style='margin-bottom: 2em' layout="row">
+        <div flex-gt-sm="10"></div>
+        <div flex style="text-align: center">Claim Number:</div>
+        <div flex style="text-align: center">{{initialReportFormCtrl.user.claimNumber}}</div>
+        <div flex></div>
+        <div flex style="text-align: center">Occurrence Number:</div>
+        <div flex style="text-align: center">{{initialReportFormCtrl.user.occurrenceNumber}}</div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Alternate Claim Number</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.alternateClaimNumber" type="text" required>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Location</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.location">
+                <md-option value="Littleton, CO"><em>Littleton, CO</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Location 2</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.location2">
+                <md-option value="Littleton, CO"><em>Littleton, CO</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Date Of Loss</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.dateOfLoss" type="date" required>
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Time of Loss: </label>
+            <input ng-model="initialReportFormCtrl.formSubmit.timeOfLoss" type="time">
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Date Reported</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.dateReported" type="date" required>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Covg Code</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.covgCode">
+                <md-option ng-repeat="covgCode in initialReportFormCtrl.covgCodes" value="{{covgCode}}"><em>{{covgCode}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Report Type</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.reportType">
+                <md-option value="Claim"><em>Claim</em></md-option>
+                <md-option value="Report Only"><em>Report Only</md-option>
+            </md-select>
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Claimant's Personal Information</h3>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Claimant ID</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.claimantId" type="text" required>
+        </md-input-container>
+        <div flex-gt-sm="5"></div>
+        <md-radio-group layout="row" ng-model="initialReportFormCtrl.formSubmit.idType">
+            <md-radio-button style='padding-top:2em' value="Social Security Number">Social Security Number</md-radio-button>
+            <div flex-gt-sm="5"></div>
+            <md-radio-button style='padding-top:2em' value="Perm. Resident ID">Perm. Resident ID</md-radio-button>
+            <div flex-gt-sm="5"></div>
+            <md-radio-button style='padding-top:2em' value="Empl. Visa ID">Empl. Visa ID</md-radio-button>
+            <div flex-gt-sm="5"></div>
+            <md-radio-button style='padding-top:2em' value="Federal ID">Federal ID</md-radio-button>
+        </md-radio-group>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Employee ID</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.employeeId" type="text" required>
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+    <form name="userForm">
+        <div layout="row" style="margin: 0px auto 0px auto">
+
+            <div flex-gt-sm="10"></div>
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">First Name</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.firstName" type="text" required>
+            </md-input-container>
+            <div flex></div>
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Last Name</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.lastName" type="text" required>
+            </md-input-container>
+            <div flex></div>
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Middle Name</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.middleName" type="text">
+            </md-input-container>
+            <div flex-gt-sm="10"></div>
+
+        </div>
+    </form>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-card style='background-color: lightgray'>
+            <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Physical Address</h3>
+            <div flex="100" class="flex flex-col">
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Street Address</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.address1" type="text" required>
+                </md-input-container>
+            </div>
+            <div flex="100" class="flex flex-col">
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Street Address 2</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.address2" type="text">
+                </md-input-container>
+            </div>
+            <div layout="row" style="margin-bottom: 2em">
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">City</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.city" type="text" required>
+                </md-input-container>
+                <div flex></div>
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">State</label>
+                    <md-select ng-model="initialReportFormCtrl.formSubmit.state">
+                        <md-option ng-repeat="state in initialReportFormCtrl.accidentStates" value="{{state}}"><em>{{state}}</em></md-option>
+                <md-option>
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Zip Code</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.zip" type="text" required>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Country</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.country" type="text" required>
+        </md-input-container>
+        <div flex></div>
+    </div>
+    </md-card>
+    <md-card style='background-color: lightgray'>
+        <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Mailing Address</h3>
+        <div layout="row" style="margin-bottom: 2em; margin: 0px auto 0px auto">
+            <md-checkbox ng-model="initialReportFormCtrl.formSubmit.mailingCheckbox" aria-label="Checkbox 5">
+                Same As Physical Address
+            </md-checkbox>
+        </div>
+        <div flex="100" style="margin-top: 2em" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Street Address</label required>
+                    <input ng-model="initialReportFormCtrl.formSubmit.mailingStreetAddress1" type="text">
+                </md-input-container>
+            </div>
+            <div flex="100" class="flex flex-col">
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Street Address 2</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.mailingStreetAddress2" type="text">
+            </md-input-container>
+        </div>
+        <div layout="row" style="margin-bottom: 2em">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">City</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.mailingCity" type="text" required>
+            </md-input-container>
+            <div flex></div>
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">State</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.mailingState">
+                    <md-option><em>None</em></md-option>
+                    <md-option>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <div flex></div>
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Zip Code</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.mailingZip" type="text" required>
+            </md-input-container>
+            <div flex></div>
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Country</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.mailingCountry" type="text" required>
+            </md-input-container>
+            <div flex></div>
+        </div>
+    </md-card>
+    <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-card flex="100" style='background-color: lightgray; height: 100%'>
+            <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Phone and Email</h3>
+            <div layout="row" style="margin: 0px auto 0px auto">
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Home Phone</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.homePhone" type="text" required>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Personal Email</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.personalEmail" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Cell Phone</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.mobilePhone" type="text">
+                </md-input-container>
+            </div>
+            <div layout="row" style="margin: 0px auto 0px auto">
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Work Phone</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.workPhone" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block input">
+                    <label style="text-align: center">Work Email</label>
+                    <input ng-model="initialReportFormCtrl.formSubmit.workEmail" type="text">
+                </md-input-container>
+            </div>
+        </md-card>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Date of Birth</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.dateOfBirth" type="date" required>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Marital Status</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.maritalStatus">
+                <md-option value="Single"><em>Single</em></md-option>
+                <md-option value="Married"><em>Married</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Gender</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.gender">
+                <md-option value="male">Male</md-option>
+                <md-option value="female">Female</md-option>
+                <md-option value="other">Other</md-option>
+            </md-select>
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Incident Information</h3>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Loss Cause</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.lossCause">
+                <md-option ng-repeat="lossCause in initialReportFormCtrl.lossCauses" value="{{lossCause}}"><em>{{lossCause}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Loss Type</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.lossType">
+                <md-option ng-repeat="lossType in initialReportFormCtrl.lossTypes" value="{{lossType}}"><em>{{lossType}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Body Part</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.bodyPart">
+                <md-option ng-repeat="bodyPart in initialReportFormCtrl.bodyParts" value="{{bodyPart}}"><em>{{bodyPart}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Accident State</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.accidentState">
+                <md-option ng-repeat="accidentState in initialReportFormCtrl.accidentStates" value="{{accidentState}}"><em>{{accidentState}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">State of Jurisdiction</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.stateOfJurisdiction">
+                <md-option ng-repeat="accidentState in initialReportFormCtrl.accidentStates" value="{{accidentState}}"><em>{{accidentState}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Accident Location</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.accidentLocation">
+                <md-option value="City"><em>City</em></md-option>
+                <md-option value="Suburbs"><em>Suburbs</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Drivers License #</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.driversLicenseNum" type="text">
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Drivers License State</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.driversLicenseState">
+                <md-option ng-repeat="accidentState in initialReportFormCtrl.accidentStates" value="{{accidentState}}"><em>{{accidentState}}</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <label style="text-align: center">Accident Description <i>(50 character limit)</i></label>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <textarea rows="2" cols="100" maxlength="50" style="margin-bottom: 2em"></textarea>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <label style="text-align: center">Claim Summary <i>(Include any relevant details)</i></label>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <textarea rows="6" cols="125" style="margin-bottom: 2em"></textarea>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-card flex="100" style='background-color: lightgray; height: 100%'>
+            <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Initial Medical Treatment</h3>
+            <md-radio-group layout="row" style='margin-bottom: 1em' ng-model="initialReportFormCtrl.formSubmit.initialMedicalTreatment">
+                <div flex></div>
+                <md-radio-button value="None Required">None Required</md-radio-button>
+                <div flex></div>
+                <md-radio-button value="Refused">Refused</md-radio-button>
+                <div flex></div>
+                <md-radio-button value="First Aid Only">First Aid Only</md-radio-button>
+                <div flex></div>
+            </md-radio-group>
+            <md-radio-group layout="row" ng-model="initialReportFormCtrl.formSubmit.initialMedicalTreatment">
+                <div flex></div>
+                <md-radio-button value="Physician/Treatment Facility Visit">Physician/Treatment Facility Visit</md-radio-button>
+                <div flex-gt-sm="10"></div>
+                <md-radio-button value="Emergyncy Room Visit">Emergyncy Room Visit</md-radio-button>
+                <div flex></div>
+            </md-radio-group>
+        </md-card>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Group/Analysis Codes</h3>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div flex style="text-align: center; margin-top: 1em; margin-bottom: 2em"><label>Group Codes:</label></div>
+        <div flex></div>
+        <div flex style="text-align: center; margin-top: 1em; margin-bottom: 2em"><label>Special Analysis Codes:</label></div>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Department</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.departments">
+                    <md-option ng-repeat="department in initialReportFormCtrl.departments" value="{{department}}"><em>{{department}}</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Cause</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.causes">
+                    <md-option ng-repeat="cause in initialReportFormCtrl.causes" value="{{cause}}"><em>{{cause}}</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Division</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.divisions">
+                    <md-option ng-repeat="division in initialReportFormCtrl.divisions" value="{{division}}"><em>{{division}}</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Business Location</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.businessLocation">
+                    <md-option ng-repeat="businessLocation in initialReportFormCtrl.businessLocations" value="{{businessLocation}}"><em>{{businessLocation}}</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Job Title</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.jobTitle">
+                    <md-option value="Junior"><em>Junior</em></md-option>
+                    <md-option value="Senior"><em>Senior</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+        <div flex></div>
+        <div flex></div>
+    </div>
+    <hr>
+
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Workers' Compensation/Jones Act Only</h3>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Lost Time </label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.lostTime">
+                <md-option value="Less than 3 Days"><em>Less than 3 Days</em></md-option>
+                <md-option value="4 - 6 Days"><em>4 - 6 Days</em></md-option>
+                <md-option value="7 - 10 Days"><em>7 - 10 Days</em></md-option>
+                <md-option value="10+ Days"><em>10+ Days</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Date Last Worked</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.dateLastWorked" type="date">
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Returned to Work</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.returnedToWork" type="date">
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Returned to Light Duty Date</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.returnedLightDuty" type="date">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10" style="text-align: center; padding-top: 2em">OR</div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Returned to Fulltime Date</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.returnedFullTimeDate" type="date">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Employee Died Because of Accident</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.employeeDied">
+                <md-option value="No" ng-selected="true"><em>No</em></md-option>
+                <md-option value="yes"><em>Yes</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+    </div>
+    <hr>
+
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Returned to Fulltime Date</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.dateReported" type="date">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Salary Continued in Lieu of Compensation</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.salaryContinued">
+                    <md-option value="Yes"><em>Yes</em></md-option>
+                    <md-option value="No"><em>No</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Full Wages Paid Day Injured</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.wagesPaidDayInjured">
+                <md-option value="Yes"><em>Yes</em></md-option>
+                <md-option value="No"><em>No</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Employment</label>
+            <md-select ng-model="initialReportFormCtrl.formSubmit.employment">
+                <md-option value="Yes"><em>Yes</em></md-option>
+                <md-option value="No"><em>No</em></md-option>
+            </md-select>
+        </md-input-container>
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Hire Date</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.hireDate" type="date">
+        </md-input-container>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <md-input-container class="md-icon-float md-block input">
+            <label style="text-align: center">Rate of Pay</label>
+            <input ng-model="initialReportFormCtrl.formSubmit.rateOfPay" type="number">
+        </md-input-container>
+        <md-radio-group layout="row" style='margin-bottom: 1em' ng-model="initialReportFormCtrl.formSubmit.payType">
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="Hourly">Hourly</md-radio-button>
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="Daily">Daily</md-radio-button>
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="Weekly">Weekly</md-radio-button>
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="BiWeekly">BiWeekly</md-radio-button>
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="Semi-Weekly">Semi-Weekly</md-radio-button>
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="Monthly">Monthly</md-radio-button>
+            <div flex></div>
+            <md-radio-button style='padding-top: 2em' value="Annually">Annually</md-radio-button>
+            <div flex></div>
+        </md-radio-group>
+        <div flex></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Job Code</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.jobCode">
+                    <md-option value="001"><em>001</em></md-option>
+                    <md-option value="002"><em>002</em></md-option>
+                    <md-option value="003"><em>003</em></md-option>
+                    <md-option value="004"><em>004</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+        <div flex style="text-align: center">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Job Title (Carrier)</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.jobTitle">
+                    <md-option value="Officer"><em>Officer</em></md-option>
+                    <md-option value="Paramedic"><em>Paramedic</em></md-option>
+                    <md-option value="Captain"><em>Captain</em></md-option>
+                    <md-option value="Chief"><em>Chief</em></md-option>
+                    <md-option value="Driver"><em>Driver</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex></div>
+    </div>
+    <hr>
+
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">State Specific Fields for Colorado</h3>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">First Report Correction (CCMSI use only)</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.firstReportCorrection">
+                    <md-option value="1"><em>1</em></md-option>
+                    <md-option value="2"><em>2</em></md-option>
+                    <md-option value="3"><em>3</em></md-option>
+                    <md-option value="4"><em>4</em></md-option>
+                    <md-option value="5"><em>5</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Full Denial</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.fullDenial">
+                    <md-option value="Yes"><em>Yes</em></md-option>
+                    <md-option value="No"><em>No</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Final Payment Body Part Code 1</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.finalPaymentBodyPartCode1">
+                        <md-option value="1"><em>1</em></md-option>
+                        <md-option value="2"><em>2</em></md-option>
+                        <md-option value="3"><em>3</em></md-option>
+                        <md-option value="4"><em>4</em></md-option>
+                        <md-option value="5"><em>5</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Percent - Body Part Code 1</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.percentBodyPartCode1" type="text">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Final Payment Body Part Code 2</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.finalPaymentBodyPartCode2">
+                        <md-option value="1"><em>1</em></md-option>
+                        <md-option value="2"><em>2</em></md-option>
+                        <md-option value="3"><em>3</em></md-option>
+                        <md-option value="4"><em>4</em></md-option>
+                        <md-option value="5"><em>5</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Percent - Body Part Code 2</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.percentBodyPartCode2" type="text">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Final Payment Body Part Code 3</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.finalPaymentBodyPartCode3">
+                        <md-option value="1"><em>1</em></md-option>
+                        <md-option value="2"><em>2</em></md-option>
+                        <md-option value="3"><em>3</em></md-option>
+                        <md-option value="4"><em>4</em></md-option>
+                        <md-option value="5"><em>5</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Percent - Body Part Code 3</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.percentBodyPartCode3" type="text">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Final Payment Body Part Code 4</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.finalPaymentBodyPartCode4">
+                        <md-option value="1"><em>1</em></md-option>
+                        <md-option value="2"><em>2</em></md-option>
+                        <md-option value="3"><em>3</em></md-option>
+                        <md-option value="4"><em>4</em></md-option>
+                        <md-option value="5"><em>5</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Percent - Body Part Code 4</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.percentBodyPartCode4" type="text">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin: 0px auto 0px auto">
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Whole Person</label>
+                <md-select ng-model="initialReportFormCtrl.formSubmit.wholePerson">
+                        <md-option value="1"><em>1</em></md-option>
+                        <md-option value="2"><em>2</em></md-option>
+                        <md-option value="3"><em>3</em></md-option>
+                        <md-option value="4"><em>4</em></md-option>
+                        <md-option value="5"><em>5</em></md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+        <div flex="100" class="flex flex-col">
+            <md-input-container class="md-icon-float md-block input">
+                <label style="text-align: center">Percent - Whole Person</label>
+                <input ng-model="initialReportFormCtrl.formSubmit.percentWholePerson" type="text">
+            </md-input-container>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <hr>
+
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Attachments</h3>
+    <h4 style="text-align: center; margin-top: 1em; margin-bottom: 2em">You must click on a "Save" button below before you can add attachments.</h4>
+    <hr>
+
+    <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">History</h3>
+    <div layout="row" style="margin: 0px auto 0px auto; margin-bottom: 2em">
+        <div flex-gt-sm="10"></div>
+        <md-card flex="100" style='background-color: lightgray; height: 100%'>
+            <h3 style="text-align: center; margin-top: 1em; margin-bottom: 2em">Completed By</h3>
+            <div layout="row">
+                <div flex-gt-sm="10"></div>
+                <div flex="100" class="flex flex-col">
+                    <md-input-container class="md-icon-float md-block input">
+                        <label style="text-align: center">Name</label>
+                        <input ng-model="initialReportFormCtrl.formSubmit.completedByName" type="text">
+                    </md-input-container>
+                </div>
+                <div flex-gt-sm="10"></div>
+            </div>
+            <div layout="row">
+                <div flex-gt-sm="10"></div>
+                <div flex="100" class="flex flex-col">
+                    <md-input-container class="md-icon-float md-block input">
+                        <label style="text-align: center">Title</label>
+                        <input ng-model="initialReportFormCtrl.formSubmit.completedByTitle" type="text">
+                    </md-input-container>
+                </div>
+                <div flex-gt-sm="10"></div>
+            </div>
+            <div layout="row">
+                <div flex-gt-sm="10"></div>
+                <div flex="100" class="flex flex-col">
+                    <md-input-container class="md-icon-float md-block input">
+                        <label style="text-align: center">Phone</label>
+                        <input ng-model="initialReportFormCtrl.formSubmit.completedByPhone" type="text">
+                    </md-input-container>
+                </div>
+                <div flex-gt-sm="10"></div>
+            </div>
+        </md-card>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div style='margin-bottom: 1em' layout="row">
+        <div flex-gt-sm="10"></div>
+        <div flex style="text-align: center">Created: 08/25/2017</div>
+        <div flex></div>
+        <div flex style="text-align: center">Last Changed: 08/25/2017</div>
+        <div flex></div>
+        <div flex style="text-align: center">Ready For Review: 08/25/2017</div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div style='margin-bottom: 2em' layout="row">
+        <div flex></div>
+        <div flex style="text-align: center">RPO Submitted: 08/25/2017</div>
+        <div flex-gt-sm="10"></div>
+        <div flex style="text-align: center">Claim Submitted: 08/25/2017</div>
+        <div flex></div>
+    </div>
+    <hr>
+    <div layout="row">
+        <div flex-gt-sm="10"></div>
+        <div style="margin: 0px auto 0px auto">
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button ng-click="initialReportFormCtrl.submit(initialReportFormCtrl.formSubmit)" class="md-raised md-warn">Submit Claim</md-button>
+            </section>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row">
+        <div flex-gt-sm="10"></div>
+        <div style="margin: 0px auto 0px auto">
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button ng-click="initialReportFormCtrl.cancelBtn()" class="md-raised md-warn">Cancel Changes</md-button>
+            </section>
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+    <div layout="row" style="margin-top: 2em; margin-bottom:2em">
+        <div flex-gt-sm="10"></div>
+        <div flex style="text-align: center">
+            A "<span style="color: red">*</span>" next to a field means that it is required.
+        </div>
+        <div flex-gt-sm="10"></div>
+    </div>
+
+</md-content>
+
+<pre>
+        {{initialReportFormCtrl | json}}
+</pre>

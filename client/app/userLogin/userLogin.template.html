@@ -1,0 +1,62 @@
+<div layout="column" layout-padding ng-cloak>
+
+  <!-- <div class="row">
+
+    <br/>
+
+    <md-content class="md-no-momentum">
+
+      <md-input-container class="md-icon-float md-block">
+        <label>Social Security Number</label>
+        <md-icon class="name"></md-icon>
+        <input type="number" ng-model="userLoginCtrl.ssn">
+      </md-input-container>
+
+      <md-input-container class="md-icon-float md-block">
+        <label>Employee Identification</label>
+        <md-icon class="name"></md-icon>
+        <input type="number">
+      </md-input-container>
+
+    </md-content>
+
+  </div>
+
+  <md-button class="md-raised md-primary" ng-click="userLoginCtrl.login(userLoginCtrl.ssn)">Sign In</md-button>
+
+</div> -->
+
+  <!-- New Login  -->
+
+
+  <section layout="column" flex layout-align="center center" class="login">
+    <md-card class="md-whiteframe-4dp">
+      <md-toolbar>
+        <div layout="column" layout-padding layout-align="center center">
+          <div>
+            <!-- <md-icon class="logo">home</md-icon> -->
+          </div>
+          <div class="md-headline md-padding"> Vault Login</div>
+        </div>
+      </md-toolbar>
+      <md-card-content>
+        <form name="login">
+          <md-input-container class="md-block">
+            <label for="employeeId">Employee ID</label>
+            <input type="" ng-model="userLoginCtrl.employeeId" required>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label for="password">Password</label>
+            <input type="password" ng-model="userLoginCtrl.password" required/>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <div layout="row" layout-align="center center">
+              <md-button class="md-raised md-warn" ng-click="userLoginCtrl.login(userLoginCtrl.employeeId, userLoginCtrl.password)"> Login </md-button>
+            </div>
+          </md-input-container>
+        </form>
+      </md-card-content>
+    </md-card>
+  </section>
+</div>
+<pre>{{userLoginCtrl | json}}</pre>
