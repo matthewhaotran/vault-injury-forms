@@ -1,65 +1,65 @@
 {
-  "name": "thevaultforms",
-  "scripts": {
-    "start": "node index.js",
-    "postinstall": "gulp build"
-	},
-	"engines": {
-		"node": "8.1.2"
-	},
-  "dependencies": {
-    "angular": "^1.6.5",
-    "angular-animate": "^1.6.5",
-    "angular-aria": "^1.6.5",
-    "angular-local-storage": "^0.6.0",
-    "angular-material": "^1.1.4",
-    "angular-material-icons": "^0.7.1",
-    "angular-ui-router": "^1.0.3",
-    "bcrypt": "^1.0.2",
-    "bcrypt-nodejs": "0.0.3",
-    "bluebird": "^3.5.0",
-    "body-parser": "^1.14.0",
-    "bootstrap": "^3.3.7",
-    "bson": "^1.0.4",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^4.0.0",
-    "express": "^4.13.3",
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.7.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-uglify": "^3.0.0",
-    "jquery": "^3.2.1",
-    "jspdf": "^1.3.3",
-    "lodash": "^4.17.4",
-    "mongoose": "^4.11.7",
-    "morgan": "^1.8.2",
-    "mpromise": "^0.5.5",
-    "mquery": "^2.3.1",
-    "mysql2": "^1.3.5",
-    "passport": "^0.4.0",
-    "passport-jwt": "^3.0.0",
-    "passport-local": "^1.0.0",
-    "sequelize": "^4.5.0"
-  },
-  "devDependencies": {
-		"chai": "^4.0.2",
-		"mocha": "^3.4.2"
-	},
-	"description": "A demo for The Vault",
-	"version": "1.0.0",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/TheVaultForms/TheVaultForms.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/TheVaultForms/TheVaultForms/issues"
-	},
-	"homepage": "https://github.com/TheVaultForms/TheVaultForms#readme"
+ "name": "thevaultforms",
+ "scripts": {
+  "start": "node index.js",
+  "postinstall": "gulp build"
+ },
+ "engines": {
+  "node": "8.1.2"
+ },
+ "dependencies": {
+  "angular": "^1.6.5",
+  "angular-animate": "^1.6.5",
+  "angular-aria": "^1.6.5",
+  "angular-local-storage": "^0.6.0",
+  "angular-material": "^1.1.4",
+  "angular-material-icons": "^0.7.1",
+  "angular-ui-router": "^1.0.3",
+  "bcrypt": "1.0.2",
+  "bcrypt-nodejs": "0.0.3",
+  "bluebird": "^3.5.0",
+  "body-parser": "^1.14.0",
+  "bootstrap": "^3.3.7",
+  "bson": "^1.0.4",
+  "connect-flash": "^0.1.1",
+  "cookie-parser": "^1.4.3",
+  "dotenv": "^4.0.0",
+  "express": "^4.13.3",
+  "font-awesome": "^4.7.0",
+  "gulp": "^3.9.1",
+  "gulp-clean-css": "^3.7.0",
+  "gulp-concat": "^2.6.1",
+  "gulp-load-plugins": "^1.5.0",
+  "gulp-nodemon": "^2.2.1",
+  "gulp-uglify": "^3.0.0",
+  "jquery": "^3.2.1",
+  "jspdf": "^1.3.3",
+  "lodash": "^4.17.4",
+  "mongoose": "^4.11.7",
+  "morgan": "^1.8.2",
+  "mpromise": "^0.5.5",
+  "mquery": "^2.3.1",
+  "mysql2": "^1.3.5",
+  "passport": "^0.4.0",
+  "passport-jwt": "^3.0.0",
+  "passport-local": "^1.0.0",
+  "sequelize": "^4.5.0"
+ },
+ "devDependencies": {
+  "chai": "^4.0.2",
+  "mocha": "^3.4.2"
+ },
+ "description": "A demo for The Vault",
+ "version": "1.0.0",
+ "main": "index.js",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/TheVaultForms/TheVaultForms.git"
+ },
+ "author": "",
+ "license": "ISC",
+ "bugs": {
+  "url": "https://github.com/TheVaultForms/TheVaultForms/issues"
+ },
+ "homepage": "https://github.com/TheVaultForms/TheVaultForms#readme"
 }

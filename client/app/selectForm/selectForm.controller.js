@@ -10,12 +10,12 @@
     function selectFormController($stateParams, $state, localStorageService) {
         var vm = this;
         vm.goToForm = goToForm;
-        vm.employeeId = JSON.parse(localStorage.getItem('ls.authorizationData'));
+    
 
         activate();
 
         function activate() {
-            
+            vm.employeeId = JSON.parse(localStorage.getItem('ls.authorizationData'));
         }
 
         function goToForm (selectedForm) {
