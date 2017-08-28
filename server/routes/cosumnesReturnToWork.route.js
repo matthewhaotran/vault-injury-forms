@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const cosumnesReturnToWork = require('../models/cosumnesReturnToWork.model');
+const requiresAuth = require('../lib/requiresAuth');
 
 router.get('/vaultir', (req, res) => {
     cosumnesReturnToWork.find(function(err, cosumnesReturnToWork) {
