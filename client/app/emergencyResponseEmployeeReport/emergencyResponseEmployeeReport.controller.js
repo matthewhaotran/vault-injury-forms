@@ -27,7 +27,7 @@
                         city: vm.user.city,
                         state: vm.user.state,
                         zip: vm.user.zip,
-                        homePhone: vm.user.homePhone,
+                        homePhone: vm.user.mobilePhone,
                         workPhone: vm.user.workPhone,
                         ssn: vm.user.ssn
                     }

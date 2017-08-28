@@ -116,9 +116,7 @@
                 if (emergencyResponseEmployeeReport.address1) {
                     doc.text(38, 82, emergencyResponseEmployeeReport.address1);
                 }
-                if (emergencyResponseEmployeeReport.address2) {
-                    doc.text(65, 82, emergencyResponseEmployeeReport.address2);
-                }
+                
                 if (emergencyResponseEmployeeReport.city) {
                     doc.text(78, 82, emergencyResponseEmployeeReport.city);
                 }

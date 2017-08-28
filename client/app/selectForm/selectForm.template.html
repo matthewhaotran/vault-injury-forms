@@ -1,3 +1,14 @@
+<br><br>
+
+<div layout="row" layout-align="center center" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+
+
+    <md-whiteframe class="md-whiteframe-24dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+        <span>Logged in as:  {{selectFormCtrl.user.firstName}} {{selectFormCtrl.user.lastName}}</span>
+    </md-whiteframe>
+
+</div>
+
 <div layout="column" layout-align="center center">
     <div class="md-padding" ng-cloak>
         <div>
@@ -49,6 +60,10 @@
 
 
 </div>
-<pre>
-        {{selectFormCtrl | json}}
-    </pre>
+<md-content>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised md-warn" ng-click="selectFormCtrl.logout()">Logout</md-button>
+    </section>
+
+</md-content>

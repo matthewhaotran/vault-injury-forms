@@ -10,6 +10,7 @@
     function selectFormController($stateParams, $state, localStorageService, userFactory) {
         var vm = this;
         vm.goToForm = goToForm;
+        vm.logout = logout;
         
 
         activate();
@@ -26,6 +27,11 @@
 
         function goToForm (selectedForm, user) {
             $state.go(selectedForm, {id: user.ssn});
+        }
+
+        function logout() {
+            localStorage.clear()
+            $state.go('userLogin');
         }
     }
 })();

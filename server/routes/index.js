@@ -12,6 +12,7 @@ module.exports = function (passport) {
     router.use('/initialReportForm', require('./initialReportForm.route')(passport));
     router.use('/kaiserOnTheJob', require('./kaiserOnTheJob.route')(passport));
     router.use('/accidentForm', require('./accidentForm.route')(passport));
+    router.use('/cosumnesReturnToWork', require('./cosumnesReturnToWork.route'));
 
     return router;
 };
