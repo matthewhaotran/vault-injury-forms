@@ -9,61 +9,60 @@
 
 </div>
 
-<div layout="column" layout-align="center center">
-    <div class="md-padding" ng-cloak>
-        <div>
-            <h1 class="md-title">Select City/County</h1>
-            <div layout="row">
-                <md-input-container>
+<div flex layout="row" layout-align="center center">
+    <div flex style="text-align: center" ng-cloak>
+        <div flex style="text-align: center">
+            <h1 flex style="text-align: center" class="md-title">Select City/County</h1>
+            <div flex style="text-align: center">
+                <md-input-container flex style="text-align: center">
                     <label>City/County</label>
-                    <md-select ng-model="selectedCounty">
-                        <md-option value="littletonCO">Litteton, Colorado</md-option>
-                        <md-option value="cosumnesCA">Cosumnes, California</md-option>
+                    <md-select flex style="text-align: center" ng-model="selectedCounty">
+                        <md-option flex style="text-align: center" value="littletonCO">Litteton, Colorado</md-option>
+                        <md-option flex style="text-align: center" value="cosumnesCA">Cosumnes, California</md-option>
                     </md-select>
                 </md-input-container>
             </div>
         </div>
-    </div>
 
-    <div class="md-padding" ng-cloak ng-show="selectedCounty=='littletonCO'">
-        <div>
-            <h1 class="md-title">Select Form</h1>
-            <div layout="row">
-                <md-input-container>
-                    <label>Form</label>
-                    <md-select ng-model="selectFormCtrl.selectedForm">
-                        <md-option value="accidentForm">Accident Form</md-option>
-                        <md-option value="initialReportForm">Initial Report Form</md-option>
-                    </md-select>
-                </md-input-container>
+        <div flex style="text-align: center" class="md-padding" ng-cloak ng-show="selectedCounty=='littletonCO'">
+            <div flex style="text-align: center">
+                <h1 flex style="text-align: center" class="md-title">Select Form</h1>
+                <div flex style="text-align: center">
+                    <md-input-container flex style="text-align: center">
+                        <label flex style="text-align: center">Form</label>
+                        <md-select flex style="text-align: center" ng-model="selectFormCtrl.selectedForm">
+                            <md-option flex style="text-align: center" value="accidentForm">Accident Form</md-option>
+                            <md-option flex style="text-align: center" value="initialReportForm">Initial Report Form</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+
+        <div class="md-padding" flex style="text-align: center" ng-cloak ng-show="selectedCounty=='cosumnesCA'">
+            <div flex style="text-align: center">
+                <h1 flex style="text-align: center" class="md-title">Select Form</h1>
+                <div flex style="text-align: center">
+                    <md-input-container flex style="text-align: center">
+                        <label flex style="text-align: center" >Form</label>
+                        <md-select flex style="text-align: center" ng-model="selectFormCtrl.selectedForm">
+                            <md-option flex style="text-align: center" value="kaiserOnTheJob">Kaiser</md-option>
+                            <md-option flex style="text-align: center" value="cosumnesReturnToWork">Cosumnes CSD Fire Department Return To Work Form</md-option>
+                            <md-option flex style="text-align: center" value="emergencyResponseEmployeeReport">Emergency Response Emplyee Report (Communicable Disease)</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="md-padding" ng-cloak ng-show="selectedCounty=='cosumnesCA'">
-        <div>
-            <h1 class="md-title">Select Form</h1>
-            <div layout="row">
-                <md-input-container>
-                    <label>Form</label>
-                    <md-select ng-model="selectFormCtrl.selectedForm">
-                        <md-option value="kaiserOnTheJob">Kaiser</md-option>
-                        <md-option value="cosumnesReturnToWork">Cosumnes CSD Fire Department Return To Work Form</md-option>
-                        <md-option value="emergencyResponseEmployeeReport">Emergency Response Emplyee Report (Communicable Disease)</md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-        </div>
-    </div>
-
-    <md-button class="md-raised md-primary" ng-click="selectFormCtrl.goToForm(selectFormCtrl.selectedForm, selectFormCtrl.user)">Select Form</md-button>
-
-
 </div>
-<md-content>
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+
+<md-content layout="row">
+    <div flex></div>
+    <md-button class="md-raised md-primary" ng-click="selectFormCtrl.goToForm(selectFormCtrl.selectedForm, selectFormCtrl.user)">Select Form</md-button>
+    <section layout-sm="column" layout-align="center center" layout-wrap>
         <md-button class="md-raised md-warn" ng-click="selectFormCtrl.logout()">Logout</md-button>
     </section>
-
+    <div flex></div>
 </md-content>
