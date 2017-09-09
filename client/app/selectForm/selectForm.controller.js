@@ -5,21 +5,33 @@
         .module('app.selectForm')
         .controller('selectFormController', selectFormController)
 
-    selectFormController.$inject = ['$stateParams', '$state', 'localStorageService'];
+    selectFormController.$inject = ['$stateParams', '$state', 'localStorageService', 'userFactory'];
 
-    function selectFormController($stateParams, $state, localStorageService) {
+    function selectFormController($stateParams, $state, localStorageService, userFactory) {
         var vm = this;
         vm.goToForm = goToForm;
-    
+        vm.logout = logout;
+        
 
         activate();
 
         function activate() {
-            vm.employeeId = JSON.parse(localStorage.getItem('ls.authorizationData'));
+            vm.credentials = JSON.parse(localStorage.getItem('ls.authorizationData'));
+            var employeeId = vm.credentials.employeeId;
+            userFactory
+                .getUserByEmployeeId(employeeId)
+                .then(function(user){
+                    vm.user = user;
+                });
         }
 
-        function goToForm (selectedForm) {
-            $state.go(selectedForm, {id: $stateParams.id});
+        function goToForm (selectedForm, user) {
+            $state.go(selectedForm, {id: user.ssn});
+        }
+
+        function logout() {
+            localStorage.clear()
+            $state.go('userLogin');
         }
     }
 })();

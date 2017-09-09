@@ -42,9 +42,6 @@
                 if (accidentForm.address1) {
                     doc.text(75, 72, accidentForm.address1);
                 }
-                if (accidentForm.address2) {
-                    doc.text(110, 72, accidentForm.address2);
-                }
                 if (accidentForm.city) {
                     doc.text(130, 72, accidentForm.city);
                 }

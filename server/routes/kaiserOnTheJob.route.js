@@ -3,19 +3,19 @@ const kaiserOnTheJob = require('../models/kaiserOnTheJob.model');
 const requiresAuth = require('../lib/requiresAuth');
 
 module.exports=function (passport) {
-    router.get('/vaultir',requiresAuth(), (req, res) => {
+    router.get('/vaultir', (req, res) => {
         kaiserOnTheJob.find(function(err, kaiserOnTheJob) {
             res.json(kaiserOnTheJob);
         });
     });
     
-    router.get('/vaultir/:id',requiresAuth(), (req, res) => {
+    router.get('/vaultir/:id', (req, res) => {
         kaiserOnTheJob.findOne({  'ssn': req.params.id }, 'date kaiserDoi employeeName employerContactPerson employer employersInsuranceCarrier attachedCheckbox onFileCheckbox contactNameTitle contactPhone contactFax timeStart timeEnd', function (err, kaiserOnTheJob) {
             res.json(kaiserOnTheJob);
         })
     });
     
-    router.post('/vaultir', requiresAuth(),(req, res) => {
+    router.post('/vaultir',(req, res) => {
         const newkaiserOnTheJob = new kaiserOnTheJob(req.body);
         console.log('posted!')
     
@@ -28,7 +28,7 @@ module.exports=function (passport) {
         }); 
     });
     
-    router.delete('/vaultir/:id',requiresAuth(), (req, res) => {
+    router.delete('/vaultir/:id', (req, res) => {
         console.log(req.params.id);
         newkaiserOnTheJob.remove({_id: req.params.id}, (err) => {
             if (err) {

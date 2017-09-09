@@ -1,7 +1,21 @@
 <div layout="row" layout-padding layout-wrap layout-margin ng-cloak layout-align="space-around">
-    
-    <div class="padded" md-whiteframe="6" flex="100" flex-gt-sm="50" layout="column" layout-align="center center">
-      <h1>Your form has been submitted</h1>
-    </div>
-    
+
+  <div class="padded" md-whiteframe="6" flex="100" flex-gt-sm="50" layout="column" layout-align="center center">
+    <h1>Your form has been submitted</h1>
   </div>
+
+</div>
+
+<div ng-cloak>
+  <md-content>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised md-primary" ng-click="successCtrl.goToSelect()">Select Another Form</md-button>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised md-warn" ng-click="successCtrl.logout()">Logout</md-button>
+    </section>
+
+  </md-content>
+</div>
