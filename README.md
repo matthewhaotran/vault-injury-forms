@@ -28,9 +28,7 @@ We use [Git](http://git.com/) for versioning. For the versions available, see th
 
 ## Authors
 
-* **Eric Green** - [DiveCodeMedic](https://github.com/DiveCodeMedic)
 * **Matthew Tran** - [MatthewHaoTran](https://github.com/MatthewHaoTran)
-* **Francisco Rodriguez** - [Frank0095](https://github.com/Frank0095)
 
 ## License
 
